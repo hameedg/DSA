@@ -15,6 +15,7 @@ void numberConst(int n);
 int main()
 {
     int n;
+    cout<<"Enter row size";
     cin >> n;
     increase(n);
     decrease(n);
