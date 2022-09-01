@@ -1,19 +1,13 @@
-#include <iostream>
-using namespace std;
-
-int main()
-{
-
-    int n, count = 0;
-    cout << "Enter the number";
-    cin >> n;
-
-    n = n % 10;
-    if (n % 2 == 0)
-    {
-
-        cout << n;
+    int solve(TreeNode* root,int hi){
+        if (root){
+            int k=solve(root->left, max(hi,root->val)) + solve(root->right, max(hi,root->val));
+            if (root->val>=hi){
+                k++;
+            }
+            return k;
+        }
+        return 0;
     }
-
-    return 0;
-}
+    int goodNodes(TreeNode* root) {
+        return solve(root,-10001);
+    }
