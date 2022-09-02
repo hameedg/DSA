@@ -11,3 +11,4 @@
     int goodNodes(TreeNode* root) {
         return solve(root,-10001);
     }
+//solved
